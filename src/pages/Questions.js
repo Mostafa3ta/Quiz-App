@@ -39,12 +39,10 @@ export default function Questions() {
   const { response, loading } = useAxios({ url: apiUrl })
   const [questionIndex, setQuestion] = useState(0)
   const [options, setOptions] = useState([])
-  console.log(options);
-  console.log(response);
-  console.log(apiUrl);
+  // console.log(response);
 
   useEffect(() => {
-    if (response?.results.length) {
+    if (response?.results.length > 0) {
       const question = response.results[questionIndex];
       let answers = [...question.incorrect_answers];
       answers.splice(
@@ -63,9 +61,14 @@ export default function Questions() {
       </Box>
     );
   }
+  if (questionIndex === 0) {
+    dispatch(amount_score(0));
+  }
 
   const handleClickAnswer = (e) => {
     const question = response.results[questionIndex];
+
+
     if (e.target.textContent === question.correct_answer) {
       dispatch(amount_score(score + 1));
     }
@@ -79,7 +82,7 @@ export default function Questions() {
   }
 
   return <>
-    {response.results.length === 0 ? <Error /> : <>
+    {response === null || response.results.length === 0 ? <Error /> : <>
       <Box>
         <Typography mb={3} variant='h4'>Question {questionIndex + 1}</Typography>
         <Typography mb={3} variant='h5'>{decode(response.results[questionIndex].question)}</Typography>

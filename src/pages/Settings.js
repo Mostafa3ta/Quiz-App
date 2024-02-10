@@ -4,11 +4,13 @@ import SelectField from '../components/SelectField'
 import SelectTextField from '../components/SelectTextField'
 import useAxios from '../hooks/useAxios';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { amount_score } from '../redux/QuestionsSlice';
 
 export default function Settings() {
   const { response, error, loading } = useAxios({ url: "/api_category.php" });
   let navigate = useNavigate()
-  // const [err, setErr] = useState(false)
+  const disptach = useDispatch();
 
   if (loading) {
     return (
@@ -37,8 +39,10 @@ export default function Settings() {
   ];
 
   const handleSubmit = e => {
+    disptach(amount_score(0));
     navigate('/questions')
   }
+  
   return <>
     <Typography variant='h2' mb={5} fontWeight='bold'>Quiz App</Typography>
 

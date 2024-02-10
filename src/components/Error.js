@@ -18,7 +18,7 @@ export default function Error() {
     };
     return <>
         <Typography variant="h4" mt={20} mb={2} color="red">
-            Sorry Something Went Wrong
+            Sorry, Something Went Wrong
         </Typography>
         <Typography variant="h5" mb={10} color="red">
             Try Different Settings
