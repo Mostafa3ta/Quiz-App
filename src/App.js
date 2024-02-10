@@ -1,25 +1,24 @@
-import logo from './logo.svg';
+import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
+import Settings from './pages/Settings'
+import Questions from './pages/Questions'
+import Score from './pages/Score'
 import './App.css';
+import { Box } from '@mui/material';
+import Footer from './components/Footer';
+
+let routers = createBrowserRouter([
+  { path: '/', element: <Settings /> },
+  { path: '/questions', element: <Questions /> },
+  { path: '/score', element: <Score /> },
+])
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <>
+    <Box textAlign='center' mt={8} mb={8}>
+      <RouterProvider router={routers}></RouterProvider>
+      <Footer></Footer>
+    </Box>
+  </>
 }
 
 export default App;
