@@ -44,7 +44,7 @@ export default function Settings() {
   }
   
   return <>
-    <Typography variant='h2' mb={5} fontWeight='bold'>Quiz App</Typography>
+    <Typography variant='h2' mb={5} fontWeight='bold'>Quick Quiz</Typography>
 
     <form onSubmit={handleSubmit}>
       <SelectField options={response.trivia_categories} label='Category' />
@@ -52,7 +52,7 @@ export default function Settings() {
       <SelectField options={typeOptions} label='Type' />
       <SelectTextField />
       <Box mt={3} width='100%' >
-        <Button fullWidth variant='contained' type='submit'>
+        <Button fullWidth color='primary' variant='contained' type='submit'>
           GET STARTED
         </Button>
       </Box>

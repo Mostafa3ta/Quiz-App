@@ -88,7 +88,7 @@ export default function Questions() {
         <Typography mb={3} variant='h5'>{decode(response.results[questionIndex].question)}</Typography>
         {options.map((data, id) => (
           <Box mt={2} key={id}>
-            <Button onClick={handleClickAnswer} variant="contained" fullWidth>
+            <Button onClick={handleClickAnswer} color='info' variant="contained" fullWidth>
               {decode(data)}
             </Button>
           </Box>

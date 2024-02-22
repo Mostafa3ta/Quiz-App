@@ -23,7 +23,7 @@ export default function Error() {
         <Typography variant="h5" mb={10} color="red">
             Try Different Settings
         </Typography>
-        <Button onClick={handleBackToSettings} variant="contained">
+        <Button onClick={handleBackToSettings} color='info' variant="contained">
             back to settings
         </Button>
     </>

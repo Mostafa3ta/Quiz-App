@@ -27,7 +27,7 @@ export default function Score() {
       <Typography variant="h3" fontWeight="bold" mb={3}>
         {score} / {amount_question}
       </Typography>
-      <Button onClick={handleBackToSettings} variant="contained">
+      <Button onClick={handleBackToSettings} color='success' variant="contained">
         back to settings
       </Button>
     </Box>
