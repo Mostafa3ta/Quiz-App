@@ -3,7 +3,7 @@ body {
   text-align: center;
   margin: auto;
   box-sizing: border-box;
-  background-color: lavender;
+  background-color: rgb(203, 203, 255);
 }
 
 @media screen and (max-width:900px) {
@@ -13,7 +13,7 @@ body {
 }
 
 .footer{
-  background-color: dimgray;
+  background-color: rgb(105, 105, 105);
   position: fixed;
   bottom: 0;
   left: 0;

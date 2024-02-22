@@ -13,7 +13,6 @@ export default function Footer() {
                 <a href="https://www.linkedin.com/in/mostafa-mahmoud-33a1542b0" target="_blank" rel='noopener noreferrer'>
                     <i className="fab fa-linkedin-in"></i>
                 </a>
-
         </Box>
     </>
 }
