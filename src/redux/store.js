@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { QuestionReducer } from "./QuestionsSlice";
 
-export let store = configureStore({
+export const store = configureStore({
     reducer: {
         Questions: QuestionReducer
     }

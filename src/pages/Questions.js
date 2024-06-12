@@ -12,16 +12,16 @@ const getRandomInt = (max) => {
 };
 
 export default function Questions() {
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
-  let {
+  const {
     question_category,
     question_difficulty,
     question_type,
     amount_question,
     score,
   } = useSelector((state) => state.Questions);
-  let dispatch = useDispatch();
+  const dispatch = useDispatch();
   let apiUrl = `/api.php?`
 
   apiUrl = apiUrl.concat(`amount=${amount_question}`);
@@ -44,7 +44,7 @@ export default function Questions() {
   useEffect(() => {
     if (response?.results.length > 0) {
       const question = response.results[questionIndex];
-      let answers = [...question.incorrect_answers];
+      const answers = [...question.incorrect_answers];
       answers.splice(
         getRandomInt(question.incorrect_answers.length + 1),
         0,

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 
-let QuestionsSlice = createSlice({
+const QuestionsSlice = createSlice({
     name: 'Questions_Slice',
     initialState: {
         question_category: "",
@@ -35,5 +35,5 @@ let QuestionsSlice = createSlice({
     }
 })
 
-export let QuestionReducer = QuestionsSlice.reducer;
-export let { question_category, question_difficulty, question_type, amount_of_question, amount_score } = QuestionsSlice.actions;
+export const QuestionReducer = QuestionsSlice.reducer;
+export const { question_category, question_difficulty, question_type, amount_of_question, amount_score } = QuestionsSlice.actions;
