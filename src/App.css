@@ -3,7 +3,7 @@ body {
   text-align: center;
   margin: auto;
   box-sizing: border-box;
-  background-color: rgb(203, 203, 255);
+  background-color: rgb(226, 246, 255);
 }
 
 @media screen and (max-width:900px) {
@@ -13,7 +13,7 @@ body {
 }
 
 .footer{
-  background-color: rgb(105, 105, 105);
+  /* background-color: rgb(105, 105, 105); */
   position: fixed;
   bottom: 0;
   left: 0;
@@ -23,11 +23,11 @@ body {
 
 .footer a , a:hover{
   text-decoration: none;
-  color: lavender;
+  color: rgb(56, 118, 211);
 }
 .footer i{
-  font-size: 2rem;
-  margin: .5rem .5rem .3rem;
+  font-size: 1.8rem;
+  margin: .5rem .7rem .3rem;
   transition: all .3s ease;
 }
 
